@@ -5,3 +5,6 @@ function sub()
  if(a.length<=8)
  {
   alert(password must be 8 digit)
+  return;
+ }
+}
