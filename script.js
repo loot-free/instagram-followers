@@ -1,4 +1,4 @@
 function sub()
 {
  var a;
-  a=document.
+  a=document.frm1.txt
