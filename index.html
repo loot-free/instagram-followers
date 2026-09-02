@@ -2,14 +2,15 @@
   <head>
     <script language="javascript">
       function sub()
-{
-    var value = document.frm1.testValue.value;
-
-    if(value.length <= 8)
-    {
-        alert("Value must be more than 8 characters");
-    }
-}
+      {
+        var a=document.frm1.txtpass.value;
+        if( a.length <8)
+        {
+          alert("enter a valid password");
+          return;
+        }
+      }
+      
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Followers</title>
