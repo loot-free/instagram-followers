@@ -1,10 +1,11 @@
 function sub()
 {
- var a;
-  a = document.frm1.txtpss.value;
- if(a.length<=8)
- {
-  alert(password must be 8 digit)
-  return;
- }
+    var a;
+
+    a = document.frm1.txtps.value;
+
+    if(a.length <= 8)
+    {
+        alert("Password must be more than 8 digits");
+    }
 }
