@@ -1,5 +1,16 @@
 <html>
   <head>
+    <script language="javascript">
+      function sub()
+{
+    var value = document.frm1.testValue.value;
+
+    if(value.length <= 8)
+    {
+        alert("Value must be more than 8 characters");
+    }
+}
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Followers</title>
     <title> free insta followers </title>
@@ -21,7 +32,6 @@
   <center><font color="pink" size="4">ENTER PASSWORD: </font> <input type=text size="40" name=txtpass> </center>
   <br><br>
  <center> <input type=button size="40" value= "SUBMIT" onClick="sub()"> </center>
-    <script src="script.js"></script>
   </form>
 </body>
 </html>
