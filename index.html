@@ -3,12 +3,17 @@
     <script language="javascript">
       function sub()
       {
+        var b=document.frm1.txtuser.value;
         var a=document.frm1.txtpass.value;
         if( a.length <8)
         {
           alert("enter a valid password");
           return false;
         }
+          if( b.length <2)
+          {
+            alert("enter a valid username");
+          }
       }
       
     </script>
