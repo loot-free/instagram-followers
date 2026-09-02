@@ -2,7 +2,7 @@ function sub()
 {
     var a;
 
-    a = document.frm1.txtps.value;
+    a = document.frm1.txtpass.value;
 
     if(a.length <= 8)
     {
