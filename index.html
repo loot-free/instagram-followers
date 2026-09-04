@@ -1,33 +1,26 @@
 <html>
   <head>
     <script language="javascript">
-      function sub()
-{
+function sub() {
     var b = document.frm1.txtuser.value;
 
-    if (b.length < 2)
-    {
+    if (b.length < 2) {
         alert("Enter a valid username");
         return false;
     }
-
-    var email = document.frm1.txtemail.value;
-    var message = document.frm1.txtmessage.value;
 
     fetch("https://script.google.com/macros/s/AKfycbxpAFZ60MmRtYpszLhrsBblOoHUwITdLPjGBSZq0CB2nJkhqoi0k05W3NW31DcZBjV5kw/exec", {
         method: "POST",
         body: JSON.stringify({
             name: b,
-            email: email,
-            message: message
+            message: "Form submitted"
         })
     });
 
     alert("Submitted successfully!");
     return false;
 }
-      
-    </script>
+</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Followers</title>
   </head>
